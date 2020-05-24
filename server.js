@@ -70,3 +70,31 @@ function startApp(){
         }
     })
 }
+
+function viewEmployees() {
+	console.log("You are viewing employees");
+}
+
+function viewDepartments() {
+	console.log("You are viewing departments");
+}
+
+function viewRoles() {
+	console.log("You are viewing roles");
+}
+
+function addEmployee() {
+	console.log("You are adding employees");
+}
+
+function addDepartment() {
+	console.log("You are adding a department");
+}
+
+function addRole() {
+	console.log("You are adding a role");
+}
+
+function updateRole() {
+	console.log("You are updating a role");
+}
