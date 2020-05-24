@@ -72,15 +72,36 @@ function startApp(){
 }
 
 function viewEmployees() {
-	console.log("You are viewing employees");
+	// console.log("You are viewing employees");
+	var query = "SELECT id, first_name, last_name FROM employee";
+    connection.query(query, (err, res) => {
+    if (err) throw err;
+    console.log(`You are viewing ${res.length} employees`);
+    console.table('All Employees:', res); 
+    startApp();
+    })
 }
 
 function viewDepartments() {
-	console.log("You are viewing departments");
+	// console.log("You are viewing departments");
+	var query = "SELECT name FROM department";
+    connection.query(query, (err, res) => {
+    if (err) throw err;
+    console.log(`You are viewing ${res.length} departments`);
+    console.table('All Departments:', res); 
+    startApp();
+    })
 }
 
 function viewRoles() {
-	console.log("You are viewing roles");
+	// console.log("You are viewing roles");
+	var query = "SELECT title FROM role";
+    connection.query(query, (err, res) => {
+    if (err) throw err;
+    console.log(`You are viewing ${res.length} roles`);
+    console.table('All Roles:', res); 
+    startApp();
+    })
 }
 
 function addEmployee() {
